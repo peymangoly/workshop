@@ -49,12 +49,13 @@ Other:
 •	Physical access to server limited
 
 Design monitoring system for this case:
--	Standalone monitoring system like zabbix, nagios and prometheus take time to configure, may expensive for hiring emploee and not a vital things to this server. But in wide ecosystem with a datacenter may worth it.
+-	Standalone and professional monitoring system like zabbix, nagios and prometheus take time to configure, may expensive for hiring emploee and not sutable for this server with tese resourse. But in wide ecosystem with a datacenter and varity of servers may worth it.
 -	I prefer to design this monitoring in OS layer with OS services that can easily find on that and may not take a huge resource.
--	For Network I prefer to have a wide screen and process the log of networking service. Customised by cronjob for reporting and backup and set trigger with bash script in background. It will be making noise, light and emailing for any errors and alarms on networks metrics threshold.
--	For CPU, Memory and Hdd, visualise KPI’s may prefer. But whatching to that not enough and need to trigger alarms with bash or third party services in OS if not take a huge resource.
+-	For Network I prefer to have a wide screen and process the logs of networking service. Customised by cronjob for reporting and backup and set trigger with bash script in background. It will be making noise, light and emailing for any errors and alarms on networks metrics threshold.
+-	For CPU, Memory and Hdd, visualise KPI’s may prefer. But whatching not enough and we need to trigger alarms with embded monitoring services, bash scripts or light third party services in OS if not take a huge resource like emailing.
 -	
--	
+
+
 Challenges:
 1.	Select best monitoring system 
 2.	Configure monitoring tools with atomated alarm trigging in multiways
@@ -63,4 +64,8 @@ Challenges:
 5.	Should be awar of certification and licence expiration date
 6.	Updating OS and sofware systems for pass the security holes must be in daily routin
 7.	OS service health like logging system, permissions, backup system and hardening check may have a challange and need to attention.
+8.	The seperation of monitoring and serving system is an important things but in this case we’ll have a lot of trouble with monitoring on this server simaltinusly
 
+
+
+Peyman.Goly@detail.ir

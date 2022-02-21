@@ -1,0 +1,20 @@
+build structure:
+ the starting script start with checking no text file with the same name in script exist. 
+ After that make a file with 1 to 10 number with a for loop command.
+ Read variable from user for which ways to run script. Get 1 or 2 or exit variable and add to $a.
+ check the a var is valid and then with case command run script inorder to choice.
+ another loop with While command check if the read variable not valid then repat again to get another choice from user.
+
+ 
+usage
+This script may use to playing game(!), drawing, generate password, creating hash or other things that need random number in specific range.
+
+description
+
+
+
+Known limitation / bugs
+
+There are limitation such as running environment, for-while-case loop, and calculation resource for other range.
+We have issue in generating file on space that we have not permission. And our bash script atrributes for run may lose inorder to move and copy.
+Also we may have troubles and bugs in shuf and sort commands.

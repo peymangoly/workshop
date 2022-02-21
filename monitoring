@@ -25,7 +25,7 @@ In level 2 we must have a free space on RAM and Swap and should make sure that a
 •	Shared memory
 
 File Integrity check:
-In the SSL-offloadind and proxy server check the certificate file always needs for monitor on each request. In order to security and prevent SSL frauding we have to prepare systems that check these files integrity and content health.
+In the SSL-offloadinding and proxy server check the certificate file always need for monitor on each request. In order to security and prevent SSL frauding we have to prepare systems that check these files integrity and content health.
 
 CPU:
 After all above proceccing and working with best performance to compute cryptography keys for encryption and handle the transaction are essential for a live SSL and proxy server.  

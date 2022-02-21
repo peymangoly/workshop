@@ -1,0 +1,28 @@
+#!/bin/bash
+# This script print on screen No 1 to 10 in random order in 2 ways
+# written by: Peyman Goli 
+# 20-Feb-2022
+
+rm -f fortest.txt            # If the file exist with same name remove it for don't rewrite on it
+for i in {1..10}             # The for loop generats number 1 to 10 and add them in a file with fortest.txt filename 
+do
+   echo $i >> fortest.txt
+done
+while (true)                 # This loop insert here to if the output is not valid check again and do the statemnet.
+do
+read -p "please choose your favorite way to print 1-10 randomly: (1-with shuf 2-with sort or exit) " a
+case $a in
+   1)
+     shuf fortest.txt        # These commands reorder the file's content with random line 
+    ;;
+   2)
+     sort -R fortest.txt
+   ;;
+   exit)
+     exit 0
+   ;;
+   *)
+     echo "this is not corret choice! please choose 1 or 2"
+   ;;
+esac
+done

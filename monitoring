@@ -1,13 +1,13 @@
 TASK 2:
 
-For start monitor servers with empty handed especially on OS we should have a power on screen with a runing live monitor system like monitor resource system tools: top, htop, nload, iftop and etc.
+To start monitoring servers with empty handed especially on OS we should have a power on screen with a runing live monitoring system like monitor resource system tools: top, htop, nload, iftop and etc.
 
 Which metrics should monitor?
 
 The most likely answer for SSL- Offloading and proxy service monitoring categorized below in order to importance:
 
 Network:
- At first the most important things to watch for the best network performance is that we should have stable network and the bandwidth, network loading and connectivity. And we should also certify that network will be fine and NIC working nice. Before these, configuration of NIC bonding is the better way for fault tolerance. For network metrics we should set alarm trigger and notifications. And after that schedule reports in specific time.The key metric in network that can be monitored align with our KPIs are:
+ At first one of the most important things to watch for the best network performance is that we should have stable network and the bandwidth, network loading and connectivity. And we should also certify that network will be fine and NIC working nice. The key metrics in network that can be monitored align with our KPIs are:
 •	Bandwidth
 •	Latency and Packet Loss
 •	Throughput
@@ -18,18 +18,17 @@ Network:
 
 
 Memory:
-In level 2 we must have a free space on RAM and Swap and should make sure that always have a certain free memory. Because this kind of server using cash and swap size for keeping temporary data, encryption and utiliaze read and write on hard disk. The parameter for memory should be appeard in:
+The SSL-offloading and proxy server are using cash and swap size for keeping temporary data, encryption and utiliaze read and write on hard disk. The parameter for memory should be appeard in:
 •	Swap free size
 •	Bufferd
 •	Cashed
 •	Shared memory
 
 File Integrity check:
-In the SSL-offloadinding and proxy server check the certificate file always need for monitor on each request. In order to security and prevent SSL frauding we have to prepare systems that check these files integrity and content health.
+As the SSL-offloading and proxy server check the certificate file, it is always required to monitor on each request. In order to security and prevent SSL frauding we have to prepare systems that check these files integrity and content health.
 
 CPU:
-After all above proceccing and working with best performance to compute cryptography keys for encryption and handle the transaction are essential for a live SSL and proxy server.  
-CPU metrics are shown as:
+Proceccing and working with best performance, to compute cryptography keys for encryption and handle the transaction are essential for a live SSL and proxy server we need to monitor CPU metrics are shown as:
 •	Usage (Load average)
 •	Idle time
 •	Cores involved proceccing
@@ -49,23 +48,15 @@ Other:
 •	Physical access to server limited
 
 Design monitoring system for this case:
--	Standalone and professional monitoring system like zabbix, nagios and prometheus take time to configure, may expensive for hiring emploee and not sutable for this server with tese resourse. But in wide ecosystem with a datacenter and varity of servers may worth it.
--	I prefer to design this monitoring in OS layer with OS services that can easily find on that and may not take a huge resource.
--	For Network I prefer to have a wide screen and process the logs of networking service. Customised by cronjob for reporting and backup and set trigger with bash script in background. It will be making noise, light and emailing for any errors and alarms on networks metrics threshold.
--	For CPU, Memory and Hdd, visualise KPI’s may prefer. But whatching not enough and we need to trigger alarms with embded monitoring services, bash scripts or light third party services in OS if not take a huge resource like emailing.
--	
-
+-	Standalone and professional monitoring system like zabbix, nagios and prometheus take time to configure, may expensive for hiring emploee and not sutable for this stand alone server with these resourse. But in wide ecosystem with a datacenter and varity of servers may worth it.
+-	I prefer to design this monitoring in OS layer with OS services and set trigger with bash script in background. It will be making noise, light and emailing for any errors and alarms on networks metrics threshold and other KPI’s.
 
 Challenges:
 1.	Select best monitoring system 
-2.	Configure monitoring tools with atomated alarm trigging in multiways
-3.	Design NOC and SOC for first level operation and security actions that act and solve the first appear issues
-4.	Should be awar of common man in the middle hacks and disorder of server behavior 
-5.	Should be awar of certification and licence expiration date
-6.	Updating OS and sofware systems for pass the security holes must be in daily routin
-7.	OS service health like logging system, permissions, backup system and hardening check may have a challange and need to attention.
-8.	The seperation of monitoring and serving system is an important things but in this case we’ll have a lot of trouble with monitoring on this server simaltinusly
-
-
-
-Peyman.Goly@detail.ir
+2.	Configure monitoring tools with automated alarm trigging in multiways
+3.	Should be awar of common man in the middle hacks and disorder of server behavior 
+4.	Should be awar of certification and licence expiration date.
+5.	Updating OS and sofware systems for pass the security holes must be in daily routin.
+6.	OS service health like logging system, permissions, backup system and hardening check may have a challange and need to attention.
+7.	The seperation of monitoring and serving system is an important things but in this case we’ll have a lot of trouble with monitoring on this server simaltinusl.
+8.	Althouge this is the out of task scoop but design NOC and SOC for first level operation and security actions that act and solve the first appear issues may be a challenge.
